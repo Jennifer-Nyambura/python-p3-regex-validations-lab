@@ -1,13 +1,11 @@
 import re
 
-# NOTE: There are only a few tests included, so multiple solutions will work.
-# Feel free to encourage students to find oversights and add tests to this lab!
 
-name = r""
-name_regex = re.compile(name)
+# Allows letters, apostrophes, spaces, and hyphens in names
+name_regex = re.compile(r"^[A-Za-z]+(?:[ '-][A-Za-z]+)*$")
 
-phone_number = r""
-phone_regex = re.compile(phone_number)
+# Regex for matching a valid phone number (example: 123-456-7890 or (123) 456-7890)
+phone_regex = re.compile(r"^(\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}$")
 
-email_address = r""
-email_regex = re.compile(email_address)
+# Regex for matching a valid email address
+email_regex = re.compile(r"^[\w\.-]+@[\w\.-]+\.\w+$")
